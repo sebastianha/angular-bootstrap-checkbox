@@ -3,7 +3,8 @@ angular-bootstrap-checkbox
 
 Bootstrap styled checkbox directive for AngularJS
 
-Screenshot: ![Screenshot](/checkbox.png?raw=true "Screenshot")
+Screenshot:
+![Screenshot](/checkbox.png?raw=true "Screenshot")
 
 ### Description:
 
