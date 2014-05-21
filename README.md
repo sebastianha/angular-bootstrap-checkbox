@@ -51,6 +51,6 @@ $ karma start
 
 ### License
 
-Copyright (c) 2014 Getslash GmbH
+Copyright (c) 2014 Sebastian Hammerl, Getslash GmbH
 
 Licensed under the MIT License
