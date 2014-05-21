@@ -45,3 +45,8 @@ Start Karma E2E tests (has to be installed globally before):
 $ karma start
 ```
 
+### License
+
+Copyright (c) 2014 Getslash GmbH
+
+Licensed under the MIT License
