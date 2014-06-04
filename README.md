@@ -35,7 +35,18 @@ Add "ui.checkbox" to your modules list. Then you can use it like AngularJS input
 ></checkbox>
 ```
 
-See index.html for examples and how it looks.
+Additionally you can set the size:
+
+```
+<checkbox ...></checkbox>               (Normal size, corresponds to 'btn-xs')
+<checkbox large ...></checkbox>         (Large, corresponds to 'btn-sm')
+<checkbox larger ...></checkbox>        (Larger, corresponds to Button default size)
+<checkbox largest ...></checkbox>       (Largest, corresponds to 'btn-lg')
+```
+
+![Screenshot](/sizes.png?raw=true "Screenshot Sizes")
+
+See index.html for examples and how it works.
 
 ### Testing:
 

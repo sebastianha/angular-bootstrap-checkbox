@@ -75,7 +75,7 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[1]"
-    name="custom-name"
+    <b>name="custom-name"</b>
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -106,7 +106,7 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[2]"
-    ng-true-value="The Truth"
+    <b>ng-true-value="The Truth"</b>
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -137,7 +137,7 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[3]"
-    ng-false-value="The Untruth"
+    <b>ng-false-value="The Untruth"</b>
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -171,8 +171,8 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[4]"
-    ng-true-value="The Truth"
-    ng-false-value="The Untruth"
+    <b>ng-true-value="The Truth"</b>
+    <b>ng-false-value="The Untruth"</b>
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -202,7 +202,7 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[5]"
-    ng-change="onChange()"
+    <b>ng-change="onChange()"</b>
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -236,7 +236,41 @@
 
 <pre>&lt;checkbox
     ng-model="checkboxModel[6]"
-    ng-disabled="isDisabled === true"
+    <b>ng-disabled="isDisabled === true"</b>
+&gt;&lt;/checkbox&gt</pre>
+
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Different Sizes (normal, large, larger, largest)
+		</td>
+		<td colspan="3">
+			<checkbox id="checkbox7a" ng-model="checkboxModel[7]"></checkbox>
+			<checkbox id="checkbox7b" large ng-model="checkboxModel[7]"></checkbox>
+			<checkbox id="checkbox7c" larger ng-model="checkboxModel[7]"></checkbox>
+			<checkbox id="checkbox7d" largest ng-model="checkboxModel[7]"></checkbox>
+			<br><br>
+			<checkbox id="checkbox8a" ng-model="checkboxModel[8]"></checkbox>
+			<checkbox id="checkbox8b" large ng-model="checkboxModel[8]"></checkbox>
+			<checkbox id="checkbox8c" larger ng-model="checkboxModel[8]"></checkbox>
+			<checkbox id="checkbox8d" largest ng-model="checkboxModel[8]"></checkbox>
+		</td>
+
+		<td style="width:300px;">
+
+<pre>&lt;checkbox
+    ng-model="checkboxModel[7]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox <b>large</b>
+    ng-model="checkboxModel[7]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox <b>larger</b>
+    ng-model="checkboxModel[7]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox <b>largest</b>
+    ng-model="checkboxModel[7]"
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -249,13 +283,7 @@
 angular.module("angular-bootstrap-checkbox-test", ["ui.checkbox"])
 .controller("index", function($scope) {
     $scope.checkboxModel = [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        false, false, false,false, false, false, false, false, true
     ];
 
     $scope.changes = 0;

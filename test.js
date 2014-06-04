@@ -5,7 +5,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox0").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox0").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked
@@ -39,7 +39,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox1").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox1").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the name is set correctly
@@ -77,7 +77,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox2").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox2").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked
@@ -116,7 +116,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox3").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox3").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked
@@ -161,7 +161,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox4").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox4").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked
@@ -205,7 +205,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox5").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox5").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked
@@ -244,7 +244,7 @@ describe("Checkbutton Tests", function() {
 		browser().navigateTo("index.html");
 
 		// Check if the checkbox has been replaced with template
-		expect(element("#checkbox6").attr("class")).toBe("btn btn-default btn-xs ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox6").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
 
 
 		// Check if the checkbox is unchecked and enabled
@@ -298,5 +298,37 @@ describe("Checkbutton Tests", function() {
 		// Enable checkbox again
 		element("#checkboxButton6enable").click();
 		expect(element("#checkbox6").attr("disabled")).toBe(undefined);
+	});
+
+	it("Example Different Sizes", function() {
+		browser().navigateTo("index.html");
+
+		// Check if the checkbox has been replaced with template
+		expect(element("#checkbox7a").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox7b").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-sm ng-dirty");
+		expect(element("#checkbox7c").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox7d").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-lg ng-dirty");
+		expect(element("#checkbox8a").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox8b").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-sm ng-dirty");
+		expect(element("#checkbox8c").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid ng-dirty");
+		expect(element("#checkbox8d").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-lg ng-dirty");
+
+		expect(element("#checkbox7a").css("width")).toBe("22px");
+		expect(element("#checkbox7b").css("width")).toBe("30px");
+		expect(element("#checkbox7c").css("width")).toBe("34px");
+		expect(element("#checkbox7d").css("width")).toBe("45px");
+		expect(element("#checkbox8a").css("width")).toBe("22px");
+		expect(element("#checkbox8b").css("width")).toBe("30px");
+		expect(element("#checkbox8c").css("width")).toBe("34px");
+		expect(element("#checkbox8d").css("width")).toBe("45px");
+
+		expect(element("#checkbox7a").css("height")).toBe("22px");
+		expect(element("#checkbox7b").css("height")).toBe("30px");
+		expect(element("#checkbox7c").css("height")).toBe("34px");
+		expect(element("#checkbox7d").css("height")).toBe("45px");
+		expect(element("#checkbox8a").css("height")).toBe("22px");
+		expect(element("#checkbox8b").css("height")).toBe("30px");
+		expect(element("#checkbox8c").css("height")).toBe("34px");
+		expect(element("#checkbox8d").css("height")).toBe("45px");
 	});
 });
