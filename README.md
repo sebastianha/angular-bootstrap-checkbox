@@ -13,7 +13,7 @@ The standard checkboxes which use the input HTML element just don't look good in
 
 Surprisingly, I could not find any nice looking, simple checkbox, so I built one. It is based on a button and Glyphicons which behaves like a normal checkbox.
 
-The angular-bootstrap-checkbox is compatible to the use of the original AngularJS input[checkbox].
+The angular-bootstrap-checkbox is compatible to the use of the original AngularJS input[checkbox], with one minor change: while the original implementation allows an "uninitialized" or other then defined state of the model this one forces "false" or "ng-false-value" (not checked) when not set to "true" or "ng-true-value".
 
 ### Installation via Bower:
 
