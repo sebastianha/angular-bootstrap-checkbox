@@ -46,7 +46,7 @@ Additionally you can set the size:
 
 ![Screenshot](/sizes.png?raw=true "Screenshot Sizes")
 
-And also style the checkboxes Bootstrap like:
+And also style the checkboxes like Bootstrap buttons:
 
 ```
 <checkbox class="btn-primary"></checkbox>    (Looks like primary button)
