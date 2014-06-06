@@ -331,4 +331,23 @@ describe("Checkbutton Tests", function() {
 		expect(element("#checkbox8c").css("height")).toBe("34px");
 		expect(element("#checkbox8d").css("height")).toBe("45px");
 	});
+
+	it("Example Different Styles", function() {
+		browser().navigateTo("index.html");
+
+		// Check if the checkbox has been replaced with template
+		expect(element("#checkbox9a").attr("class")).toBe("btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox9b").attr("class")).toBe("btn-primary btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox9c").attr("class")).toBe("btn-success btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox9d").attr("class")).toBe("btn-info btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox9e").attr("class")).toBe("btn-warning btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+		expect(element("#checkbox9f").attr("class")).toBe("btn-danger btn btn-default ng-isolate-scope ng-valid btn-xs ng-dirty");
+
+		expect(element("#checkbox9a").css("background-color")).toBe("rgb(255, 255, 255)");
+		expect(element("#checkbox9b").css("background-color")).toBe("rgb(66, 139, 202)");
+		expect(element("#checkbox9c").css("background-color")).toBe("rgb(92, 184, 92)");
+		expect(element("#checkbox9d").css("background-color")).toBe("rgb(91, 192, 222)");
+		expect(element("#checkbox9e").css("background-color")).toBe("rgb(240, 173, 78)");
+		expect(element("#checkbox9f").css("background-color")).toBe("rgb(217, 83, 79)");
+	});
 });

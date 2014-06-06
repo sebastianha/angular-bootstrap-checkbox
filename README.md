@@ -38,13 +38,25 @@ Add "ui.checkbox" to your modules list. Then you can use it like AngularJS input
 Additionally you can set the size:
 
 ```
-<checkbox ...></checkbox>               (Normal size, corresponds to 'btn-xs')
-<checkbox large ...></checkbox>         (Large, corresponds to 'btn-sm')
-<checkbox larger ...></checkbox>        (Larger, corresponds to Button default size)
-<checkbox largest ...></checkbox>       (Largest, corresponds to 'btn-lg')
+<checkbox ...></checkbox>            (Normal size, corresponds to 'btn-xs')
+<checkbox large ...></checkbox>      (Large, corresponds to 'btn-sm')
+<checkbox larger ...></checkbox>     (Larger, corresponds to Button default size)
+<checkbox largest ...></checkbox>    (Largest, corresponds to 'btn-lg')
 ```
 
 ![Screenshot](/sizes.png?raw=true "Screenshot Sizes")
+
+And also style the checkboxes Bootstrap like:
+
+```
+<checkbox class="btn-primary"></checkbox>    (Looks like primary button)
+<checkbox class="btn-success"></checkbox>    (Looks like success button)
+<checkbox class="btn-info"></checkbox>       (Looks like info button)
+<checkbox class="btn-warning"></checkbox>    (Looks like warning button)
+<checkbox class="btn-danger"></checkbox>     (Looks like danger button)
+```
+
+![Screenshot](/styles.png?raw=true "Screenshot Styles")
 
 See index.html for examples and how it works.
 
