@@ -58,6 +58,12 @@ And also style the checkboxes like Bootstrap buttons:
 
 ![Screenshot](/styles.png?raw=true "Screenshot Styles")
 
+Invert selection of checkbox
+```
+Show Item
+<checkbox ng-model="data.isHidden" invert="true"></checkbox>
+```
+
 See index.html for examples and how it works.
 
 ### Testing:
