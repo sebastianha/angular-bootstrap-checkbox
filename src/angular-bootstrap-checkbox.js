@@ -35,8 +35,8 @@ angular.module('ui.checkbox', []).directive('checkbox', function() {
 				scope.stylefaicon = {'width': '11px', 'position': 'relative', 'left': '-14px', 'top': '-2px', 'font-size': '40px'};
 			}
 
-			var trueValue = true;
-			var falseValue = false;
+			var trueValue = attrs.invert ? false : true;
+			var falseValue = attrs.invert ? true : false;
 
 			// If defined set true value
 			if(attrs.ngTrueValue !== undefined) {
