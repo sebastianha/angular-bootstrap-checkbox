@@ -22,24 +22,13 @@ module.exports = function(grunt) {
         },
       }
     },
-    ngtemplates: {
-      glyphicon: {
-        src:      'src/*-glyphicon-tpl.html',
-        dest:     'dist/angular-bootstrap-checkbox-glyphicon-tpl.js',
-        options: {
-          module: 'ui.checkbox',
-          url: function(url) { return url.replace('src/', '').replace('-glyphicon', ''); }
-        }
-      },
-      fontawesome: {
-        src:      'src/*-fontawesome-tpl.html',
-        dest:     'dist/angular-bootstrap-checkbox-fontawesome-tpl.js',
-        options: {
-          module: 'ui.checkbox',
-          url: function(url) { return url.replace('src/', '').replace('-fontawesome', ''); }
-        }
-      }
-    },
+	less: {
+		dist: {
+			files: {
+				'dist/angular-bootstrap-checkbox.css': 'src/*.less'
+			}
+		}
+	},
     uglify: {
       options: {
         mangle: true,
@@ -67,9 +56,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bump');
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-angular-templates');
 
-  grunt.registerTask('default', ['jshint', 'ngtemplates', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'less', 'uglify']);
 };

@@ -43,10 +43,27 @@ Additionally you can set the size:
 
 ```
 <checkbox ...></checkbox>            (Normal size, corresponds to 'btn-xs')
-<checkbox large ...></checkbox>      (Large, corresponds to 'btn-sm')
-<checkbox larger ...></checkbox>     (Larger, corresponds to Button default size)
-<checkbox largest ...></checkbox>    (Largest, corresponds to 'btn-lg')
+<checkbox class="large" ...></checkbox>      (Large, corresponds to 'btn-sm')
+<checkbox class="larger" ...></checkbox>     (Larger, corresponds to Button default size)
+<checkbox class="largest" ...></checkbox>    (Largest, corresponds to 'btn-lg')
 ```
+
+###Configure
+
+By default, glyphicon icon is used but you can customize the classes within ui-checkbox through the uiCheckboxConfig constant. You can alter the constant globally in your apps boot phase or within a controller and pass the options to the checkbox directive as a parameter.
+
+```
+//controller
+$scope.customConfig = {
+	iconClass: 'fa fa-check',
+	buttonClass: 'btn btn-default btn-success'
+};
+```
+
+```
+<span checkbox="customConfig" ng-model="form.ok"></span>
+```
+
 
 ![Screenshot](/sizes.png?raw=true "Screenshot Sizes")
 
@@ -69,8 +86,6 @@ Show Item
 ```
 
 See index.html for examples and how it works.
-
-See index-fa.html for the FontAwesome version.
 
 ### Testing:
 

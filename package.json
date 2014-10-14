@@ -12,13 +12,13 @@
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-jshint": "*",
+    "grunt-bump": "0.0.11",
+    "grunt-contrib-clean": "latest",
     "grunt-contrib-concat": "*",
     "grunt-contrib-jasmine": "*",
-    "grunt-contrib-clean": "latest",
-    "grunt-bump": "0.0.11",
-    "grunt-angular-templates": "~0.5.4"
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "*"
   }
 }
