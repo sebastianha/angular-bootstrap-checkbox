@@ -37,7 +37,9 @@ angular.module('ui.checkbox', [])
 
 			// Update element when model changes
 			scope.$watch(function() {
-				if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === true) {
+				var baseComparison = attrs.invert ? false : true;
+				
+				if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === baseComparison) {
 					modelCtrl.$setViewValue(trueValue);
 				} else {
 					modelCtrl.$setViewValue(falseValue);
