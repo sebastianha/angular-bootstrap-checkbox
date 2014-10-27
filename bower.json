@@ -4,14 +4,17 @@
   "authors": [
     "Sebastian Hammerl, Getslash GmbH"
   ],
-  "description": "A Twitter Bootstrap styled checkbox to use with AngularJS",
+  "description": "A checkbox for AngularJS styled to fit the Twitter Bootstrap standard design",
   "main": "angular-bootstrap-checkbox.js",
   "keywords": [
     "angular",
     "angularjs",
+    "directive",
+    "ui",
     "bootstrap",
-    "checkbox",
-    "input"
+    "form",
+    "input",
+    "checkbox"
   ],
   "license": "MIT",
   "ignore": [
@@ -21,8 +24,7 @@
   ],
   "dependencies": {
     "angular": ">= 1.2.0",
-    "bootstrap": ">= 3.0.0",
-    "font-awesome": ">= 4.2.0"
+    "bootstrap": ">= 3.0.0"
   },
   "devDependencies": {
     "angular-scenario": ">= 1.2.0"

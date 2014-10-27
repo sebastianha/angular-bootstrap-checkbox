@@ -1,7 +1,7 @@
 angular-bootstrap-checkbox
 ==========================
 
-Bootstrap styled checkbox directive for AngularJS
+A checkbox for AngularJS styled to fit the Twitter Bootstrap standard design
 
 Screenshot:
 
@@ -85,7 +85,7 @@ Show Item
 <checkbox ng-model="data.isHidden" invert="true"></checkbox>
 ```
 
-See index.html for examples and how it works.
+See index.html and app.js for examples and how it works.
 
 ### Testing:
 
