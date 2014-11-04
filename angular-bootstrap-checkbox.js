@@ -5,7 +5,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 		scope: {},
 		require: "ngModel",
 		restrict: "E",
-		replace: "true",
+		//replace: "true",
 		templateUrl: 'template/angular-bootstrap-checkbox/checkbox.html',
 		link: function(scope, elem, attrs, modelCtrl) {
 			scope.size = "default";
@@ -16,17 +16,17 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			// If size is undefined, Checkbox has normal size (Bootstrap 'xs')
 			if(attrs.large !== undefined) {
 				scope.size = "large";
-				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "30px"};
+				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "30px", "width":"30px"};
 				scope.styleicon = {"width": "8px", "left": "-5px", "font-size": "17px"};
 			}
 			if(attrs.larger !== undefined) {
 				scope.size = "larger";
-				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "34px"};
+				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "34px", "width":"34px"};
 				scope.styleicon = {"width": "8px", "left": "-8px", "font-size": "22px"};
 			}
 			if(attrs.largest !== undefined) {
 				scope.size = "largest";
-				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px"};
+				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px", "width":"45px"};
 				scope.styleicon = {"width": "11px", "left": "-11px", "font-size": "30px"};
 			}
 
