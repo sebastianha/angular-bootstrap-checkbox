@@ -5,7 +5,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 		scope: {},
 		require: "ngModel",
 		restrict: "E",
-		replace: "true",
+		transclude: true,
 		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest'}\">" +
 			"<span ng-style=\"styleicon\" class=\"glyphicon\" ng-class=\"{'glyphicon-ok': checked===true}\"></span>" +
 			"</button>",
