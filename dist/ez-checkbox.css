@@ -1,0 +1,12 @@
+.ez-checkbox {
+  position: relative;
+  margin-right: 5px;
+  color: #333;
+  cursor: pointer;
+}
+.ez-checkbox:hover {
+  text-decoration: none;
+}
+.ez-checkbox i {
+  cursor: pointer;
+}

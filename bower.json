@@ -1,19 +1,12 @@
 {
-  "name": "angular-bootstrap-checkbox",
-  "version": "0.4.1",
-  "authors": [
-    "Sebastian Hammerl, Getslash GmbH"
-  ],
-  "description": "A checkbox for AngularJS styled to fit the Twitter Bootstrap standard design",
-  "main": "angular-bootstrap-checkbox.js",
+  "name": "ez-checkbox",
+  "version": "0.0.0",
+  "description": "A checkbox for AngularJS",
   "keywords": [
     "angular",
     "angularjs",
     "directive",
-    "ui",
-    "bootstrap",
     "form",
-    "input",
     "checkbox"
   ],
   "license": "MIT",
@@ -24,9 +17,6 @@
   ],
   "dependencies": {
     "angular": ">= 1.2.0",
-    "bootstrap": ">= 3.0.0"
-  },
-  "devDependencies": {
-    "angular-scenario": ">= 1.2.0"
+    "font-awesome": ">= 4.0.0"
   }
 }

@@ -12,6 +12,13 @@ module.exports = function(grunt) {
         commitFiles: ['package.json', 'bower.json']
       }
     },
+    cssmin: {
+      style: {
+        files: {
+          'dist/ez-checkbox.min.css': ['dist/ez-checkbox.css']
+        }
+      }
+    },
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -22,13 +29,13 @@ module.exports = function(grunt) {
         },
       }
     },
-	less: {
-		dist: {
-			files: {
-				'dist/angular-bootstrap-checkbox.css': 'src/*.less'
-			}
-		}
-	},
+    less: {
+      dist: {
+        files: {
+          'dist/ez-checkbox.css': 'src/*.less'
+        }
+      }
+    },
     uglify: {
       options: {
         mangle: true,
@@ -37,7 +44,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/angular-bootstrap-checkbox.min.js': ['src/**/*.js']
+          'dist/ez-checkbox.min.js': ['src/**/*.js']
         }
       }
     },
@@ -55,9 +62,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-bump');
 
-  grunt.registerTask('default', ['jshint', 'less', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'less', 'uglify', 'cssmin']);
 };
