@@ -6,7 +6,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 		require: "ngModel",
 		restrict: "E",
 		replace: "true",
-		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest', 'checked': checked===true}\">" +
+		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"[checkedClass, {'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest'}]\">" +
 			"<span ng-style=\"styleicon\" class=\"glyphicon\" ng-class=\"{'glyphicon-ok': checked===true}\"></span>" +
 			"</button>",
 		link: function(scope, elem, attrs, modelCtrl) {
@@ -35,6 +35,12 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			var trueValue = true;
 			var falseValue = false;
 
+			// Checked classes
+			var checkedClasses = {
+				checked: (typeof attrs.checkedClass !== 'undefined')?attrs.checkedClass:'',
+				unChecked: (typeof attrs.uncheckedClass !== 'undefined')?attrs.uncheckedClass:''
+			};
+
 			// If defined set true value
 			if(attrs.ngTrueValue !== undefined) {
 				trueValue = attrs.ngTrueValue;
@@ -59,6 +65,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 				return modelCtrl.$modelValue;
 			}, function(newVal, oldVal) {
 				scope.checked = modelCtrl.$modelValue === trueValue;
+				scope.checkedClass =(scope.checked)?checkedClasses.checked:checkedClasses.unChecked;
 			}, true);
 
 			// On click swap value and trigger onChange function
