@@ -35,7 +35,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			var trueValue = true;
 			var falseValue = false;
 
-			// CHecked classes
+			// Checked classes
 			var checkedClasses = {
 				checked: (typeof attrs.checkedClass !== 'undefined')?attrs.checkedClass:'',
 				unChecked: (typeof attrs.uncheckedClass !== 'undefined')?attrs.uncheckedClass:''
