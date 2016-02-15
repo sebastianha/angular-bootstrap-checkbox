@@ -1,0 +1,19 @@
+{
+  "name": "angular-bootstrap-checkbox",
+  "version": "1.0.0",
+  "description": "angular-bootstrap-checkbox ==========================",
+  "main": "angular-bootstrap-checkbox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HourlyNerd/angular-bootstrap-checkbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HourlyNerd/angular-bootstrap-checkbox/issues"
+  },
+  "homepage": "https://github.com/HourlyNerd/angular-bootstrap-checkbox#readme"
+}
