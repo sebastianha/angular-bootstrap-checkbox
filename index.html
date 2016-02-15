@@ -10,9 +10,9 @@
 </head>
 <body ng-app="angular-bootstrap-checkbox-test" ng-controller="index">
 
-<table class="table" style="width:800px;">
+<table class="table" style="width:900px;">
 	<tr>
-		<th style="width:150px;">
+		<th style="width:200px;">
 			Example
 		</th>
 		<th style="width:20px;"></th>
@@ -339,6 +339,63 @@
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-danger"</b>
     ng-model="checkboxModel[9]"
+&gt;&lt;/checkbox&gt</pre>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Using ng-class (also for checked & unchecked)
+		</td>
+		<td></td>
+		<td>
+			always:<br><br><br>
+
+			checked:<br><br><br>
+
+			unchecked:<br><br><br>
+
+			both:
+		</td>
+		<td>
+			<checkbox id="checkbox11a" ng-model="checkboxModel[11]" ng-class="{'btn-primary': true}"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox12a" ng-model="checkboxModel[12]" ng-class="{'btn-primary': true}"></checkbox><br><br><br>
+
+			<checkbox id="checkbox11b" ng-model="checkboxModel[11]" ng-class="{'btn-success': checked === true}"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox12b" ng-model="checkboxModel[12]" ng-class="{'btn-success': checked === true}"></checkbox><br><br><br>
+
+			<checkbox id="checkbox11c" ng-model="checkboxModel[11]" ng-class="{'btn-warning': checked === false}"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox12c" ng-model="checkboxModel[12]" ng-class="{'btn-warning': checked === false}"></checkbox><br><br><br>
+
+			<checkbox id="checkbox11d" ng-model="checkboxModel[11]" ng-class="{'btn-success': checked === true, 'btn-warning': checked === false}"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox12d" ng-model="checkboxModel[12]" ng-class="{'btn-success': checked === true, 'btn-warning': checked === false}"></checkbox>
+		</td>
+
+		<td style="width:300px;">
+
+<pre>
+&lt;checkbox
+    <b>ng-class="{'btn-primary': true}"</b>
+    ng-model="checkboxModel[11]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox
+    <b>ng-class="{'btn-success': checked === true}"</b>
+    ng-model="checkboxModel[11]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox
+    <b>ng-class="{'btn-warning': checked === false}"</b>
+    ng-model="checkboxModel[11]"
+&gt;&lt;/checkbox&gt
+&lt;checkbox
+    <b>ng-class="{
+        'btn-success': checked === true,
+        'btn-warning': checked === false
+    }"</b>
+    ng-model="checkboxModel[11]"
 &gt;&lt;/checkbox&gt</pre>
 		</td>
 	</tr>
