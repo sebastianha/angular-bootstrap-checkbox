@@ -1,0 +1,31 @@
+{
+  "name": "angular-bootstrap-checkbox",
+  "version": "0.4.0",
+  "description": "A checkbox for AngularJS styled to fit the Twitter Bootstrap standard design",
+  "main": "angular-bootstrap-checkbox.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianha/angular-bootstrap-checkbox.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directive",
+    "ui",
+    "bootstrap",
+    "form",
+    "input",
+    "checkbox"
+  ],
+  "author": "Sebastian Hammerl, Getslash GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastianha/angular-bootstrap-checkbox/issues"
+  },
+  "homepage": "https://github.com/sebastianha/angular-bootstrap-checkbox#readme"
+}
