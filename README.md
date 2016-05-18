@@ -32,6 +32,8 @@ Add "ui.checkbox" to your modules list. Then you can use it like AngularJS input
     ng-true-value="The Truth"       (Optional)
     ng-false-value="The Untruth"    (Optional)
     ng-change="onChange()"          (Optional)
+    indeterminate="true"            (Optional)
+    ng-indeterminate-value="test"   (Optional)
 ></checkbox>
 ```
 
@@ -74,6 +76,6 @@ $ karma start
 
 ### License
 
-Copyright (c) 2014 Sebastian Hammerl, Getslash GmbH
+Copyright (c) 2016 Sebastian Hammerl, Getslash GmbH
 
 Licensed under the MIT License

@@ -7,7 +7,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 		restrict: "E",
 		replace: "true",
 		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest', 'checked': checked===true}\">" +
-			"<span ng-style=\"styleicon\" class=\"glyphicon\" ng-class=\"{'glyphicon-ok': checked===true}\"></span>" +
+			"<span ng-style=\"styleicon\" class=\"glyphicon\" ng-class=\"{'glyphicon-ok': checked===true, 'glyphicon-minus': checked===undefined}\"></span>" +
 			"</button>",
 		compile: function compile(elem, attrs, transclude) {
 			if(attrs.ngClass !== undefined) {
@@ -36,9 +36,14 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 					scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px"};
 					scope.styleicon = {"width": "11px", "left": "-11px", "font-size": "30px"};
 				}
+				var indeterminate = false;
+				if(attrs.indeterminate === "true") {
+					indeterminate = true;
+				}
 
 				var trueValue = true;
 				var falseValue = false;
+				var indeterminateValue = undefined;
 
 				// If defined set true value
 				if(attrs.ngTrueValue !== undefined) {
@@ -47,6 +52,10 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 				// If defined set false value
 				if(attrs.ngFalseValue !== undefined) {
 					falseValue = attrs.ngFalseValue;
+				}
+				// If defined set indeterminate value
+				if(attrs.ngIndeterminateValue !== undefined) {
+					indeterminateValue = attrs.ngIndeterminateValue;
 				}
 
 				// Check if name attribute is set and if so add it to the DOM element
@@ -58,21 +67,37 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 				scope.$watch(function() {
 					if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === true) {
 						modelCtrl.$setViewValue(trueValue);
+					} else if(indeterminate === true && (modelCtrl.$modelValue === indeterminateValue || modelCtrl.$modelValue === undefined)) {
+						modelCtrl.$setViewValue(indeterminateValue);
 					} else {
 						modelCtrl.$setViewValue(falseValue);
 					}
 					return modelCtrl.$modelValue;
 				}, function(newVal, oldVal) {
-					scope.checked = modelCtrl.$modelValue === trueValue;
+					if(indeterminate === true && modelCtrl.$modelValue === indeterminateValue) {
+						scope.checked = undefined;
+					} else {
+						scope.checked = modelCtrl.$modelValue === trueValue;
+					}
 				}, true);
 
 				// On click swap value and trigger onChange function
 				elem.bind("click", function() {
 					scope.$apply(function() {
-						if(modelCtrl.$modelValue === falseValue) {
-							modelCtrl.$setViewValue(trueValue);
+						if(indeterminate === true) {
+							if(modelCtrl.$modelValue === falseValue) {
+								modelCtrl.$setViewValue(trueValue);
+							} else if(modelCtrl.$modelValue === trueValue) {
+								modelCtrl.$setViewValue(indeterminateValue);
+							} else {
+								modelCtrl.$setViewValue(falseValue);
+							}
 						} else {
-							modelCtrl.$setViewValue(falseValue);
+							if(modelCtrl.$modelValue === falseValue) {
+								modelCtrl.$setViewValue(trueValue);
+							} else {
+								modelCtrl.$setViewValue(falseValue);
+							}
 						}
 					});
 				});

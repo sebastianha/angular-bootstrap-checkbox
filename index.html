@@ -244,33 +244,64 @@
 
 	<tr>
 		<td>
+			Example indeterminate state
+		</td>
+		<td>
+			<checkbox id="checkbox7" ng-model="checkboxModel[7]" indeterminate="true"></checkbox>
+		</td>
+		<td>
+			<span id="checkboxModel7" ng-bind="checkboxModel[7]"></span>
+		</td>
+		<td>
+			<button id="checkboxButton7true" style="width:150px;" ng-click="checkboxModel[7] = true">
+				Set to true
+			</button><br>
+			<button id="checkboxButton7false" style="width:150px;" ng-click="checkboxModel[7] = false">
+				Set to false
+			</button>
+			<button id="checkboxButton7undefined" style="width:150px;" ng-click="checkboxModel[7] = undefined">
+				Set to undefined
+			</button>
+		</td>
+		<td style="width:300px;">
+
+<pre>&lt;checkbox
+    ng-model="checkboxModel[7]"
+    <b>indeterminate="true"</b>
+&gt;&lt;/checkbox&gt</pre>
+
+		</td>
+	</tr>
+
+	<tr>
+		<td>
 			Different Sizes (normal, large, larger, largest)
 		</td>
 		<td colspan="3">
-			<checkbox id="checkbox7a" ng-model="checkboxModel[7]"></checkbox>
-			<checkbox id="checkbox7b" large ng-model="checkboxModel[7]"></checkbox>
-			<checkbox id="checkbox7c" larger ng-model="checkboxModel[7]"></checkbox>
-			<checkbox id="checkbox7d" largest ng-model="checkboxModel[7]"></checkbox>
-			<br><br>
 			<checkbox id="checkbox8a" ng-model="checkboxModel[8]"></checkbox>
 			<checkbox id="checkbox8b" large ng-model="checkboxModel[8]"></checkbox>
 			<checkbox id="checkbox8c" larger ng-model="checkboxModel[8]"></checkbox>
 			<checkbox id="checkbox8d" largest ng-model="checkboxModel[8]"></checkbox>
+			<br><br>
+			<checkbox id="checkbox9a" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox9b" large ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox9c" larger ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox9d" largest ng-model="checkboxModel[9]"></checkbox>
 		</td>
 
 		<td style="width:300px;">
 
 <pre>&lt;checkbox
-    ng-model="checkboxModel[7]"
+    ng-model="checkboxModel[8]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>large</b>
-    ng-model="checkboxModel[7]"
+    ng-model="checkboxModel[8]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>larger</b>
-    ng-model="checkboxModel[7]"
+    ng-model="checkboxModel[8]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>largest</b>
-    ng-model="checkboxModel[7]"
+    ng-model="checkboxModel[8]"
 &gt;&lt;/checkbox&gt</pre>
 
 		</td>
@@ -295,50 +326,50 @@
 			danger:
 		</td>
 		<td>
-			<checkbox id="checkbox9a" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox10a" ng-model="checkboxModel[10]"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox10a" ng-model="checkboxModel[10]"></checkbox><br><br><br>
+			<checkbox id="checkbox11a" ng-model="checkboxModel[11]"></checkbox><br><br><br>
 
-			<checkbox id="checkbox9b" class="btn-primary" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox10b" class="btn-primary" ng-model="checkboxModel[10]"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox10b" class="btn-primary" ng-model="checkboxModel[10]"></checkbox><br><br><br>
+			<checkbox id="checkbox11b" class="btn-primary" ng-model="checkboxModel[11]"></checkbox><br><br><br>
 
-			<checkbox id="checkbox9c" class="btn-success" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox10c" class="btn-success" ng-model="checkboxModel[10]"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox10c" class="btn-success" ng-model="checkboxModel[10]"></checkbox><br><br><br>
+			<checkbox id="checkbox11c" class="btn-success" ng-model="checkboxModel[11]"></checkbox><br><br><br>
 
-			<checkbox id="checkbox9d" class="btn-info" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox10d" class="btn-info" ng-model="checkboxModel[10]"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox10d" class="btn-info" ng-model="checkboxModel[10]"></checkbox><br><br><br>
+			<checkbox id="checkbox11d" class="btn-info" ng-model="checkboxModel[11]"></checkbox><br><br><br>
 
-			<checkbox id="checkbox9e" class="btn-warning" ng-model="checkboxModel[9]"></checkbox>
+			<checkbox id="checkbox10e" class="btn-warning" ng-model="checkboxModel[10]"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox10e" class="btn-warning" ng-model="checkboxModel[10]"></checkbox><br><br><br>
+			<checkbox id="checkbox11e" class="btn-warning" ng-model="checkboxModel[11]"></checkbox><br><br><br>
 
-			<checkbox id="checkbox9f" class="btn-danger" ng-model="checkboxModel[9]"></checkbox>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<checkbox id="checkbox10f" class="btn-danger" ng-model="checkboxModel[10]"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox11f" class="btn-danger" ng-model="checkboxModel[11]"></checkbox>
 		</td>
 
 		<td style="width:300px;">
 
 <pre>&lt;checkbox
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-primary"</b>
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-success"</b>
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-info"</b>
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-warning"</b>
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox <b>class="btn-danger"</b>
-    ng-model="checkboxModel[9]"
+    ng-model="checkboxModel[10]"
 &gt;&lt;/checkbox&gt</pre>
 		</td>
 	</tr>
@@ -358,21 +389,21 @@
 			both:
 		</td>
 		<td>
-			<checkbox id="checkbox11a" ng-model="checkboxModel[11]" ng-class="{'btn-primary': true}"></checkbox>
+			<checkbox id="checkbox12a" ng-model="checkboxModel[12]" ng-class="{'btn-primary': true}"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox12a" ng-model="checkboxModel[12]" ng-class="{'btn-primary': true}"></checkbox><br><br><br>
+			<checkbox id="checkbox13a" ng-model="checkboxModel[13]" ng-class="{'btn-primary': true}"></checkbox><br><br><br>
 
-			<checkbox id="checkbox11b" ng-model="checkboxModel[11]" ng-class="{'btn-success': checked === true}"></checkbox>
+			<checkbox id="checkbox12b" ng-model="checkboxModel[12]" ng-class="{'btn-success': checked === true}"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox12b" ng-model="checkboxModel[12]" ng-class="{'btn-success': checked === true}"></checkbox><br><br><br>
+			<checkbox id="checkbox13b" ng-model="checkboxModel[13]" ng-class="{'btn-success': checked === true}"></checkbox><br><br><br>
 
-			<checkbox id="checkbox11c" ng-model="checkboxModel[11]" ng-class="{'btn-warning': checked === false}"></checkbox>
+			<checkbox id="checkbox12c" ng-model="checkboxModel[12]" ng-class="{'btn-warning': checked === false}"></checkbox>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<checkbox id="checkbox12c" ng-model="checkboxModel[12]" ng-class="{'btn-warning': checked === false}"></checkbox><br><br><br>
+			<checkbox id="checkbox13c" ng-model="checkboxModel[13]" ng-class="{'btn-warning': checked === false}"></checkbox><br><br><br>
 
-			<checkbox id="checkbox11d" ng-model="checkboxModel[11]" ng-class="{'btn-success': checked === true, 'btn-warning': checked === false}"></checkbox>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<checkbox id="checkbox12d" ng-model="checkboxModel[12]" ng-class="{'btn-success': checked === true, 'btn-warning': checked === false}"></checkbox>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<checkbox id="checkbox13d" ng-model="checkboxModel[13]" ng-class="{'btn-success': checked === true, 'btn-warning': checked === false}"></checkbox>
 		</td>
 
 		<td style="width:300px;">
@@ -380,22 +411,22 @@
 <pre>
 &lt;checkbox
     <b>ng-class="{'btn-primary': true}"</b>
-    ng-model="checkboxModel[11]"
+    ng-model="checkboxModel[12]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox
     <b>ng-class="{'btn-success': checked === true}"</b>
-    ng-model="checkboxModel[11]"
+    ng-model="checkboxModel[12]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox
     <b>ng-class="{'btn-warning': checked === false}"</b>
-    ng-model="checkboxModel[11]"
+    ng-model="checkboxModel[12]"
 &gt;&lt;/checkbox&gt
 &lt;checkbox
     <b>ng-class="{
         'btn-success': checked === true,
         'btn-warning': checked === false
     }"</b>
-    ng-model="checkboxModel[11]"
+    ng-model="checkboxModel[12]"
 &gt;&lt;/checkbox&gt</pre>
 		</td>
 	</tr>
@@ -407,7 +438,7 @@
 angular.module("angular-bootstrap-checkbox-test", ["ui.checkbox"])
 .controller("index", function($scope) {
     $scope.checkboxModel = [
-        false, false, false,false, false, false, false, false, true, false, true
+        false, false, false,false, false, false, false, false, false, true, false, true
     ];
 
     $scope.changes = 0;
