@@ -47,15 +47,15 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 
 				// If defined set true value
 				if(attrs.ngTrueValue !== undefined) {
-					trueValue = attrs.ngTrueValue;
+					trueValue = scope.$eval(attrs.ngTrueValue) || attrs.ngTrueValue;
 				}
 				// If defined set false value
 				if(attrs.ngFalseValue !== undefined) {
-					falseValue = attrs.ngFalseValue;
+					falseValue = scope.$eval(attrs.ngFalseValue) || attrs.ngFalseValue;
 				}
 				// If defined set indeterminate value
 				if(attrs.ngIndeterminateValue !== undefined) {
-					indeterminateValue = attrs.ngIndeterminateValue;
+					indeterminateValue = scope.$eval(attrs.ngIndeterminateValue) || attrs.ngIndeterminateValue;
 				}
 
 				// Check if name attribute is set and if so add it to the DOM element
@@ -65,9 +65,9 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 
 				// Update element when model changes
 				scope.$watch(function() {
-					if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === true) {
+					if(angular.equals(modelCtrl.$modelValue,trueValue) || modelCtrl.$modelValue === true) {
 						modelCtrl.$setViewValue(trueValue);
-					} else if(indeterminate === true && (modelCtrl.$modelValue === indeterminateValue || modelCtrl.$modelValue === undefined)) {
+					} else if(indeterminate === true && (angular.equals(modelCtrl.$modelValue, indeterminateValue) || modelCtrl.$modelValue === undefined)) {
 						modelCtrl.$setViewValue(indeterminateValue);
 					} else {
 						modelCtrl.$setViewValue(falseValue);
