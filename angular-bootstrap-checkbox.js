@@ -76,18 +76,18 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 				elem.bind("click", function() {
 					scope.$apply(function() {
 						if (indeterminate === true) {
-							if (modelCtrl.$modelValue === falseValue) {
-								modelCtrl.$setViewValue(trueValue);
-							} else if (modelCtrl.$modelValue === trueValue) {
+							if (modelCtrl.$modelValue === trueValue) {
 								modelCtrl.$setViewValue(indeterminateValue);
+							} else if (modelCtrl.$modelValue === falseValue) {
+								modelCtrl.$setViewValue(trueValue);
 							} else {
 								modelCtrl.$setViewValue(falseValue);
 							}
 						} else {
-							if (modelCtrl.$modelValue === falseValue) {
-								modelCtrl.$setViewValue(trueValue);
-							} else {
+							if (modelCtrl.$modelValue === trueValue) {
 								modelCtrl.$setViewValue(falseValue);
+							} else {
+								modelCtrl.$setViewValue(trueValue);
 							}
 						}
 						modelCtrl.$render();
