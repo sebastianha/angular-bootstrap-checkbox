@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-checkbox",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "authors": [
     "Sebastian Hammerl, Getslash GmbH"
   ],
@@ -17,6 +17,7 @@
     "checkbox"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/sebastianha/angular-bootstrap-checkbox",
   "ignore": [
     "**/.*",
     "node_modules",
