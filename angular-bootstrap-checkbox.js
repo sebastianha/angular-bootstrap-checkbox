@@ -63,42 +63,34 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 					elem.name = scope.name;
 				}
 
-				// Update element when model changes
-				scope.$watch(function() {
-					if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === true) {
-						modelCtrl.$setViewValue(trueValue);
-					} else if(indeterminate === true && (modelCtrl.$modelValue === indeterminateValue || modelCtrl.$modelValue === undefined)) {
-						modelCtrl.$setViewValue(indeterminateValue);
-					} else {
-						modelCtrl.$setViewValue(falseValue);
-					}
-					return modelCtrl.$modelValue;
-				}, function(newVal, oldVal) {
-					if(indeterminate === true && modelCtrl.$modelValue === indeterminateValue) {
+				//model -> UI
+				modelCtrl.$render = function() {
+					if (indeterminate === true && modelCtrl.$modelValue === indeterminateValue) {
 						scope.checked = undefined;
 					} else {
 						scope.checked = modelCtrl.$modelValue === trueValue;
 					}
-				}, true);
+				};
 
-				// On click swap value and trigger onChange function
+				//ui->model
 				elem.bind("click", function() {
 					scope.$apply(function() {
-						if(indeterminate === true) {
-							if(modelCtrl.$modelValue === falseValue) {
-								modelCtrl.$setViewValue(trueValue);
-							} else if(modelCtrl.$modelValue === trueValue) {
+						if (indeterminate === true) {
+							if (modelCtrl.$modelValue === trueValue) {
 								modelCtrl.$setViewValue(indeterminateValue);
+							} else if (modelCtrl.$modelValue === falseValue) {
+								modelCtrl.$setViewValue(trueValue);
 							} else {
 								modelCtrl.$setViewValue(falseValue);
 							}
 						} else {
-							if(modelCtrl.$modelValue === falseValue) {
-								modelCtrl.$setViewValue(trueValue);
-							} else {
+							if (modelCtrl.$modelValue === trueValue) {
 								modelCtrl.$setViewValue(falseValue);
+							} else {
+								modelCtrl.$setViewValue(trueValue);
 							}
 						}
+						modelCtrl.$render();
 					});
 				});
 			};
